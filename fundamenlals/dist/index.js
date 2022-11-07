@@ -10,7 +10,6 @@ function calculateTax(income, taxYear = 2022) {
     return income * 1.2;
 }
 calculateTax(10000);
-let date = '12.11.2022';
 let employee = {
     id: 1,
     name: 'Eşşşşek',
@@ -18,4 +17,24 @@ let employee = {
         console.log(date);
     }
 };
+function kgToLbs(weight) {
+    if (typeof weight === 'number')
+        return weight * 2.2;
+    else
+        return parseInt(weight) * 2.2;
+}
+kgToLbs(10);
+kgToLbs('10kg');
+let textBox = {
+    drag: () => { },
+    resize: () => { }
+};
+let quanity = 100;
+function greet(name) {
+    if (name)
+        console.log(name.toUpperCase());
+    else
+        console.log('Hola');
+}
+greet(undefined);
 //# sourceMappingURL=index.js.map

@@ -1,6 +1,4 @@
 
-
-
 /********    ENUMS    ***************/
 
 const small = 1
@@ -52,7 +50,42 @@ function kgToLbs(weight: number | string):number {
 }
 
 kgToLbs(10);
-kgToLbs('10kg')
+kgToLbs('10kg');
 
 
-/***************    Intersection Type    *************/
+/*****************    Intersection Type    *****************/
+
+type Draggable = {
+    drag: () => void
+}
+
+type Resizeable = {
+    resize: () => void
+}
+
+type UIWidget = Draggable & Resizeable;
+
+let textBox: UIWidget = {
+    drag: () => {},
+    resize: () => {}
+}
+
+/****************    Literal types    ****************/
+type Quanity = 50 | 100;
+let quanity: Quanity = 100;
+
+type Metric = 'cm' | 'inch';
+
+
+/*********************         Nullable Types          *******************/
+function greet(name: string | null | undefined) {
+    if(name) 
+        console.log(name.toUpperCase());
+    else
+        console.log('Hola');
+}
+
+greet(undefined); 
+
+/*******************      Optional Chaining        *****************/
+
